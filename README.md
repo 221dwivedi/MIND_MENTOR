@@ -1,4 +1,3 @@
-# MIND_MENTOR
 # Mind Mentor 🎓🧠
 
 Mind Mentor is an AI-powered career counseling web application designed to guide students and professionals in choosing the right career path based on their interests, skills, and personality traits. The platform leverages machine learning algorithms to provide intelligent and personalized recommendations.
