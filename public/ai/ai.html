@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindMentor</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <!-- Zapier Chatbot -->
+  <script type="module" src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #3b5998;
+      height: 70px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 100;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo-text {
+      color: white;
+      font-size: 30px;
+      font-weight: 1000;
+      margin: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #000;
+    }
+
+    .ai-heading {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 100px; /* To push below the navbar */
+      color: #023e8a;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .robot-img {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .robot-img img {
+      width: 180px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .chat-bot {
+      display: flex;
+      justify-content: center;
+      margin: 4rem auto;
+    }
+
+    zapier-interfaces-page-embed {
+      max-width: 900px;
+      height: 800px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        font-size: 18px;
+      }
+
+      .ai-heading {
+        font-size: 2rem;
+      }
+
+      .robot-img img {
+        width: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1 class="logo-text">MindMentor</h1>
+    <div class="nav-links">
+      <a href="/mind-mentor/public/index.php">Home</a> 
+      <a href="/mind-mentor/public/Roadmap/roadmap.html">Roadmap</a>
+      <a href="/mind-mentor/public/About/about.html">About Us</a>
+      <a href="/mind-mentor/public/Contact/contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <h1 class="ai-heading">Career Counselling Chat Bot 🚀</h1>
+
+  <!-- <div class="robot-img">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.VI0y7D_6XTO6b7-v1Z1niAHaHa&pid=Api&P=0&h=180" alt="robot" />
+  </div> -->
+
+  <div class="chat-bot">
+    <zapier-interfaces-page-embed 
+      id="chatbot" 
+      page-id="clqwmvvpo0013ont524nwyerl" 
+      no-background="true">
+    </zapier-interfaces-page-embed>
+  </div>
+</body>
+</html>

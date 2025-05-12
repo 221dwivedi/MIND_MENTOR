@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | MindMentor</title>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff; /* White background */
+      color: #121858; /* Dark Blue Text */
+    }
+
+    .navbar {
+      background-color: #3b5998; /* Dark navbar */
+      height: 70px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 100;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  .logo-text {
+      color: white;
+      font-size: 30px;
+      font-weight: 1000;
+      margin: 0;
+  }
+  
+  .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  }
+  .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+      position: relative;
+  }
+  
+  .nav-links a:hover {
+      color: #000;
+  }
+    .container {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .container h1 {
+      font-size: 42px;
+      margin-bottom: 40px;
+      color: #121858; /* Dark Blue */
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .contact-person {
+      background: #f5f5f5; /* Light Grey Card */
+      padding: 25px 20px;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-person:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-person p {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #333333;
+    }
+
+    .contact-person strong {
+      font-size: 22px;
+      color: #121858;
+    }
+
+    .bottom-navbar {
+      margin-top: 40px;
+      background-color: #3b5998;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+          display: none;
+      }
+      .container h1 {
+          font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <h1 class="logo-text">MindMentor</h1>
+    <div class="nav-links">
+      <a href="/mind-mentor/public/index.php">Home</a>
+      <a href="/mind-mentor/public/Roadmap/roadmap.html">Roadmap</a>
+      <a href="/mind-mentor/public/About/about.html">About Us</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Contact Us</h1>
+
+  <div class="contact-info">
+    <div class="contact-person">
+      <p><strong>Janhavi Dwivedi</strong></p>
+      <p>Phone No: +91 91xxxxxxxx</p>
+      <p>Email: xyz@example.com</p>
+    </div>
+
+    <div class="contact-person">
+      <p><strong>Manisha Tayal</strong></p>
+      <p>Phone No: +91 91xxxxxxxx</p>
+      <p>Email: abc@example.com</p>
+    </div>
+
+    <div class="contact-person">
+      <p><strong>Khushi Sharma</strong></p>
+      <p>Phone No: +91 73xxxxxxxx</p>
+      <p>Email: uvw@example.com</p>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-navbar">
+  <p>© 2025 Mind Mentor | Connecting Students with Experts</p>
+</div>
+
+</body>
+</html>

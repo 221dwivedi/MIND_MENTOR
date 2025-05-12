@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Style for google translate -->
+    <style>
+      body > .skiptranslate {
+        display: none;
+      }
+      .navbar {
+        background-color: #3b5998; /* Dark navbar */
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 100;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+    .logo-text {
+        color: white;
+        font-size: 30px;
+        font-weight: 1000;
+        margin: 0;
+    }
+    
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.3s, border-bottom 0.3s;
+        position: relative;
+    }
+    
+    .nav-links a:hover {
+        color: #000;
+    }
+    </style>
+  </head>
+  <body>
+    
+    <header class="no-print text-gray-600 body-font">
+      <nav class="navbar">
+        <h1 class="logo-text">MindMentor</h1>
+        <div class="nav-links">
+            <a href="/mind-mentor/public/index.php">Home</a>
+            <a href="/mind-mentor/public/Roadmap/roadmap.html">Roadmap</a>
+            
+        </div>
+    </nav>
+      <nav
+        class="bg-transparent fixed w-full z-20 top-0 start-0 border-b border-gray-200 bg-opacity-30 backdrop-filter backdrop-blur-lg"
+      >
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+           
+
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-sticky"
+          >
+            <ul
+              class="flex flex-col items-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:border-gray-200"
+            >
+             
+
+              <li>
+                <a
+                  href="/mind-mentor/public/test/test/result.html"
+                  class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-gray-800 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Results</a
+                >
+              </li>
+
+              <li>
+                <div
+                  id="langdropdown"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[white] border border-gray-300"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownDefaultButton"
+                  >
+                    <li>
+                      <div class="p-0" id="google_translate_element"></div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="loader flex justify-center items-center mt-[300px]">
+      <h1
+        class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
+      >
+        Loading...
+      </h1>
+    </div>
+    <div class="mainContainer hidden">
+      <section class="text-gray-600 body-font mt-[10px]">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-10">
+            <h1
+              class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
+            >
+              Career Assessment Test
+            </h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+              Start the 4 dimensional assessment and also discover your best fit
+              career matches
+            </p>
+          </div>
+          <div
+            class="showIfmind-mentor py-8 px-4 mx-auto max-w-screen-xl lg:py-1 lg:px-6"
+          >
+            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+              <div
+                class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:border-gray-700"
+              >
+                <img
+                  class="w-full md:w-[150px] lg:w-[210px] rounded-lg"
+                  src="../img/psycho.png"
+                  alt="Bonnie Avatar"
+                />
+
+                <div class="p-5">
+                  <h3
+                    class="text-xl font-bold tracking-tight dark:text-gray-800"
+                  >
+                    <a href="/mind-mentor/public/test/test/psycho.html">Psychometric Test</a>
+                  </h3>
+
+                  <p
+                    class="mt-3 mb-4 font-light text-gray-600 dark:text-gray-600"
+                  >
+                    Psychometric tests assess cognitive and personality traits
+                    for diverse evaluations.
+                  </p>
+                  <a href="/mind-mentor/public/test/test/psycho.html">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+                      type="button"
+                    >
+                      Start Test
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:border-gray-700"
+              >
+                <img
+                  class="w-full md:w-[150px] lg:w-[210px] rounded-lg"
+                  src="../img/apti.png"
+                  alt="Test Image"
+                />
+
+                <div class="p-5">
+                  <h3
+                    class="text-xl font-bold tracking-tight dark:text-gray-800"
+                  >
+                    <a href="/mind-mentor/public/test/test/aptitude.html">Aptitude Test</a>
+                  </h3>
+
+                  <p
+                    class="mt-3 mb-4 font-light text-gray-600 dark:text-gray-600"
+                  >
+                    Aptitude tests assess skills, potential, and suitability for
+                    specific tasks.
+                  </p>
+                  <a href="/mind-mentor/public/test/test/aptitude.html">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+                      type="button"
+                    >
+                      Start Test
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:border-gray-700"
+              >
+                <img
+                  class="w-full md:w-[150px] lg:w-[210px] rounded-lg"
+                  src="../img/interest.png"
+                  alt="Bonnie Avatar"
+                />
+
+                <div class="p-5">
+                  <h3
+                    class="text-xl font-bold tracking-tight dark:text-gray-800"
+                  >
+                    <a href="/mind-mentor/public/test/test/interest.html">Interest Test</a>
+                  </h3>
+
+                  <p
+                    class="mt-3 mb-4 font-light text-gray-600 dark:text-gray-600"
+                  >
+                    Interest tests assess preferences and passions, aiding
+                    career exploration effectively.
+                  </p>
+                  <a href="/mind-mentor/public/test/test/interest.html">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+                      type="button"
+                    >
+                      Start Test
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:border-gray-700"
+              >
+                <img
+                  class="w-full md:w-[150px] lg:w-[210px] rounded-lg"
+                  src="../img/hobbies.png"
+                  alt="Bonnie Avatar"
+                />
+
+                <div class="p-5">
+                  <h3
+                    class="text-xl font-bold tracking-tight dark:text-gray-800"
+                  >
+                    <a href="/mind-mentor/public/test/test/hobbies.html">Hobbies | Personality</a>
+                  </h3>
+
+                  <p
+                    class="mt-3 mb-4 font-light text-gray-600 dark:text-gray-600"
+                  >
+                    Hobbies/personality tests explore interests and traits,
+                    aiding self-discovery and well-being
+                  </p>
+                  <a href="/mind-mentor/public/test/test/hobbies.html">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+                      type="button"
+                    >
+                      Start Test
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:border-gray-700"
+              >
+                <img
+                  class="w-full md:w-[150px] lg:w-[210px] rounded-lg"
+                  src="../img/non-conv.png"
+                  alt="Bonnie Avatar"
+                />
+
+                <div class="p-5">
+                  <h3
+                    class="text-xl font-bold tracking-tight dark:text-gray-800"
+                  >
+                    <a href="/mind-mentor/public/test/test/nonConv.html">Non - Conventional Career Test</a>
+                  </h3>
+
+                  <p
+                    class="mt-3 mb-4 font-light text-gray-600 dark:text-gray-600"
+                  >
+                    Non-conventional career tests assess unique skills for
+                    diverse career paths effectively.
+                  </p>
+                  <a href="/mind-mentor/public/test/test/nonConv.html">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+                      type="button"
+                    >
+                      Start Test
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:border-gray-700"
+              >
+                <img
+                  class="w-full md:w-[150px] lg:w-[210px] rounded-lg"
+                  src="/mind-mentor/public/test/img/engineering_bg.jpg"
+                  alt="Bonnie Avatar"
+                />
+
+                <div class="p-5">
+                  <h3
+                    class="text-xl font-bold tracking-tight dark:text-gray-800"
+                  >
+                    <a href="/mind-mentor/public/test/test/engineering.html">Engineering Information</a>
+                  </h3>
+
+                  <p
+                    class="mt-3 mb-4 font-light text-gray-600 dark:text-gray-600"
+                  >
+                  Engineering is a diverse field applying scientific and mathematical principles to
+                  design, construct, and maintain systems.
+                  </p>
+                  <a href="/mind-mentor/public/test/test/engineering.html">
+                    <button
+                      class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+                      type="button"
+                    >
+                      Read More
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div
+              class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:border-gray-700"
+            >
+              <img
+                class="w-full md:w-[150px] lg:w-[210px] rounded-lg"
+                src="/mind-mentor/public/test/img/Science-PNG-Photos.png"
+                alt="Bonnie Avatar"
+              />
+
+              <div class="p-5">
+                <h3
+                  class="text-xl font-bold tracking-tight dark:text-gray-800"
+                >
+                  <a href="/mind-mentor/public/test/test/science.html">Science Information</a>
+                </h3>
+
+                <p
+                  class="mt-3 mb-4 font-light text-gray-600 dark:text-gray-600"
+                >
+                Choosing a science career after the 10th grade involves specializing in streams like PCM
+                                or PCB, leading to higher secondary education. This path opens doors to diverse fields
+                                such as engineering, medicine, and biotechnology.
+                </p>
+                <a href="/mind-mentor/public/test/test/science.html">
+                  <button
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+                    type="button"
+                  >
+                    Read More
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div
+            class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:border-gray-700"
+          >
+            <img
+              class="w-full md:w-[150px] lg:w-[210px] rounded-lg"
+              src="/mind-mentor/public/test/img/contentcreator.jpg"
+              alt="Bonnie Avatar"
+            />
+
+            <div class="p-5">
+              <h3
+                class="text-xl font-bold tracking-tight dark:text-gray-800"
+              >
+                <a href="/mind-mentor/public/test/test/contentCreator.html">ContentCreator Information</a>
+              </h3>
+
+              <p
+                class="mt-3 mb-4 font-light text-gray-600 dark:text-gray-600"
+              >
+              “Create with passion, share with purpose, and inspire with authenticity.”
+              </p>
+              <a href="/mind-mentor/public/test/test/contentCreator.html">
+                <button
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700"
+                  type="button"
+                >
+                  Read More
+                </button>
+              </a>
+            </div>
+          </div>
+         
+        </div>
+
+      </section>
+
+      <div
+        class="showIfNotmind-mentor w-[220px] mt-[-140px] lg:w-[300px] mx-auto flex flex-row items-center justify-between text-gray-800 border border-gray-300 p-5 rounded-lg text-base lg:text-2xl"
+      >
+        <p> <a href="/mind-mentor/public/student_data.html">Enter your data before starting test</a></p>
+        <img class="w-6 lg:w-10" src="../img/upArrow.png" alt="" />
+      </div>
+    </div>
+
+    
+    <script>
+      window.addEventListener("load", (event) => {
+        document.querySelector(".mainContainer").style.display = "block";
+        document.querySelector(".loader").style.display = "none";
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        if (localStorage.getItem("mind-mentor") === "true") {
+          document.getElementById("loggedInContent").style.display = "block";
+          document.getElementById("notLoggedInContent").style.display = "none";
+          document.querySelector(".showIfmind-mentor").style.display = "flex";
+          document.querySelector(".showIfNotmind-mentor").style.display = "none";
+
+          if (localStorage.getItem("isPremiumUser") === "true") {
+            document.getElementById("loggedInContent").style.display = "block";
+            document.getElementById("notLoggedInContent").style.display =
+              "none";
+            document.querySelector(".showIfmind-mentor").style.display = "flex";
+            document.querySelector(".showIfNotmind-mentor").style.display = "none";
+            document.querySelector(".showIfNotPremium").style.display = "none";
+          } else {
+            document.getElementById("loggedInContent").style.display = "none";
+            document.getElementById("loggedInContent").style.display = "block";
+
+            document.querySelector(".showIfmind-mentor").style.display = "none";
+            document.querySelector(".showIfNotPremium").style.display = "block";
+          }
+        } else {
+          document.getElementById("loggedInContent").style.display = "none";
+          document.getElementById("notLoggedInContent").style.display = "block";
+          document.querySelector(".showIfmind-mentor").style.display = "none";
+          document.querySelector(".showIfNotmind-mentor").style.display = "flex";
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>

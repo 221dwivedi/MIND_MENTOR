@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | MindMentor</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Roboto+Flex:opsz,wght@8..144,200;8..144,400;8..144,600;8..144,800;8..144,1000&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-image: url('/mind-mentor/public/Abou/books.jpg'); 
+    }
+
+    .navbar {
+        background-color: #3b5998; /* Dark navbar */
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 100;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+    .logo-text {
+        color: white;
+        font-size: 30px;
+        font-weight: 1000;
+        margin: 0;
+    }
+    
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.3s, border-bottom 0.3s;
+        position: relative;
+    }
+    
+    .nav-links a:hover {
+        color: #000;
+    }
+
+    .main-body-text {
+      padding: 60px 20px 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .main-body-text h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+      color:#121858;
+    }
+
+    .main-body-text h2::after {
+      content: '';
+      display: block;
+      width: 60%;
+      height: 4px;
+      background: rgb(170, 170, 239);
+      margin: 10px auto 0 auto;
+      border-radius: 2px;
+    }
+
+    .main-body-para {
+      font-size: 20px;
+      line-height: 1.8;
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 60px;
+      padding: 0 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .team-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .team-list li {
+      background: #f0f0f0;
+      border-radius: 15px;
+      padding: 30px 20px;
+      width: 280px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .team-list li:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-list strong {
+      font-size: 22px;
+      color: #121858;
+    }
+
+    .team-list p {
+      margin-top: 12px;
+      font-size: 17px;
+      color: #555555;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .team-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .logo-text {
+        font-size: 24px;
+      }
+
+      .main-body-text h2 {
+        font-size: 32px;
+      }
+
+      .main-body-para {
+        font-size: 18px;
+        padding: 0 10px;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <h1 class="logo-text">MindMentor</h1>
+    <div class="nav-links">
+      <a href="/mind-mentor/public/index.php">Home</a>
+      <a href="/mind-mentor/public/Roadmap/roadmap.html">Roadmap</a>
+      <a href="/mind-mentor/public/Contact/contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <div class="main-body-text">
+    <h2>About Us</h2>
+    <p class="main-body-para">
+      <strong>MindMentor</strong> is a vision-driven platform created by three passionate students from Computer Science (AI & ML). 
+      Having journeyed through the same doubts, decisions, and dilemmas as you, we understand how overwhelming it can feel to choose the right career.
+      <br><br>
+      Our mission is simple: to guide you towards a fulfilling career path based on your strengths, interests, and personality using the power of Artificial Intelligence. 
+      We believe that every student deserves a personalized direction — not just random advice. At MindMentor, your dreams take center stage. 
+      Let’s explore, learn, and build your future together!
+    </p>
+
+    <h2>Meet The Team</h2>
+    <ul class="team-list">
+      <li>
+        <strong>Manisha Tayal</strong>
+        <p>Final Year Student<br>Computer Science (AI & Machine Learning)</p>
+      </li>
+      <li>
+        <strong>Janhavi Dwivedi</strong>
+        <p>Final Year Student<br>Computer Science (AI & Machine Learning)</p>
+      </li>
+      <li>
+        <strong>Khushi Sharma</strong>
+        <p>Final Year Student<br>Computer Science (AI & Machine Learning)</p>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
